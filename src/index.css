@@ -1,8 +1,6 @@
 * {
   padding: 0rem;
   margin: 0rem;
-  box-sizing: border-box;
-
 }
 
 body {
@@ -28,7 +26,7 @@ input {
 }
 
 
-#container form {
+.input-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -91,6 +89,7 @@ input {
 }
 
 button{
+  display: block;
   background-color: #d8a051;
   color: #fff;
   border: none;
@@ -104,8 +103,17 @@ button{
   box-shadow: 0 0 0.0625rem 0 rgba(8, 11, 14, 0.06), 0 0.375rem 0.375rem -0.0625rem rgba(8, 11, 14, 0.1);
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  margin: 0 auto;
+  margin: 10px auto 0 auto;
+  /*top right bot left*/
 }
 
 button:hover, button:focus{
   box-shadow: 0 0 0.0625rem 0 rgba(8, 11, 14, 0.06), 0 0.375rem 0.375rem -0.0625rem rgba(8, 11, 14, 0.1);
+}
+
+.error-text{
+  color: red;
+  font-size: 13px;
+  margin-bottom: 1rem;
 }

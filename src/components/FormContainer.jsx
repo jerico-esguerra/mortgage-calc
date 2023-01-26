@@ -1,29 +1,50 @@
-import React from 'react'
+import React, { useState } from 'react';
 
 const FormContainer = () => {
+    const [purchasePrice, setPurchasePrice] = useState("");
+    const [downPayment, setDownPayment] = useState("");
+    const [loanTerm, setLoanTerm] = useState("");
+    const [loanApr, setLoanApr] = useState("");
+    const [monthlyPayment, setMonthlyPayment] = useState(0.00);
+
+    const handleCalculation = (e) => {
+        e.preventDefault();
+        console.log(purchasePrice)
+        console.log(downPayment)
+        console.log(loanTerm)
+        console.log(loanApr)
+    }
+
     return (
         <div id="container">
             <h1>Mortgage Calculator</h1>
-            <form>
-                <div className='input-section'>
-                    <label>Purchase Price: </label>
-                    <input type="text" />
+            <form onSubmit={handleCalculation}>
+                <div className='input-container'>
+                    <div className='input-section'>
+                        <label>Purchase Price: </label>
+                        <p className='error-text'>ERROR</p>
+                        <input onChange={(e) => setPurchasePrice(e.target.value)} type="text" />
+                    </div>
+                    <div className='input-section'>
+                        <label>Down Payment</label>
+                        <p className='error-text'>ERROR</p>
+                        <input onChange={(e) => setDownPayment(e.target.value)} type="text" />
+                    </div>
+                    <div className='input-section'>
+                        <label>Loan Term (Years)</label>
+                        <p className='error-text'>ERROR</p>
+                        <input onChange={(e) => setLoanTerm(e.target.value)} type="text" />
+                    </div>
+                    <div className='input-section'>
+                        <label>APR (%)</label>
+                        <p className='error-text'>ERROR</p>
+                        <input onChange={(e) => setLoanApr(e.target.value)} type="text" />
+                    </div>
                 </div>
-                <div className='input-section'>
-                    <label>Down Payment</label>
-                    <input type="text" />
-                </div>
-                <div className='input-section'>
-                    <label>Loan Term (Years)</label>
-                    <input type="text" />
-                </div>
-                <div className='input-section'>
-                    <label>APR (%)</label>
-                    <input type="text" />
-                </div>
+
+                <button type="submit">Calculate</button>
             </form>
-            <button>Submit</button>
-            <h3>Estimated Monthly Payments: $0.00</h3>
+            <h3>Estimated Monthly Payments: ${monthlyPayment}</h3>
         </div>
     )
 }
