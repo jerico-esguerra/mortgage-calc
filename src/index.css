@@ -1,0 +1,16 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+
+}
+
+body {
+  margin: 0;
+  font-family: 'Oswald', sans-serif;
+  background-color: #FFFAFB;
+}
+
+button, input {
+  outline: none;
+}
