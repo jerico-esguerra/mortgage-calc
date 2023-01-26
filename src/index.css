@@ -1,6 +1,6 @@
 * {
-  padding: 0px;
-  margin: 0px;
+  padding: 0rem;
+  margin: 0rem;
   box-sizing: border-box;
 
 }
@@ -11,6 +11,101 @@ body {
   background-color: #FFFAFB;
 }
 
-button, input {
+button,
+input {
   outline: none;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem 0;
+  max-width: 900rem;
+  margin: auto;
+
+}
+
+
+#container form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.input-section {
+  width: 45%;
+  min-width: 21.875rem;
+  max-width: 28.125rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.input-section label {
+  text-transform: uppercase;
+  font-weight: 400;
+  color: grey;
+  margin-bottom: 0.5rem;
+}
+
+.input-section input {
+  background: rgba(255, 255, 255, 0.3);
+  height: 35px;
+  border: none;
+  border-radius: 10px;
+  padding: 0 1rem;
+  color: #2a6279;
+  font-weight: 500;
+  box-shadow: 0 0 0.0625rem 0 rgba(8, 11, 14, 0.06), 0 0.375rem 0.375rem -0.0625rem rgba(8, 11, 14, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.input-section input:hover, .input-section input:focus{
+  box-shadow: 0 0 0.0625rem 0 rgba(8, 11, 14, 0.06), 0 0.375rem 0.375rem -0.0625rem rgba(8, 11, 14, 0.1);
+
+}
+
+#container h1 {
+  font-size: 2.1875rem;
+  font-weight: 500;
+  color: #2a6279;
+  margin-bottom: 0.625rem;
+  text-transform: uppercase;
+}
+
+#container h3 {
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin-top: 3rem;
+  background-color: #fff;
+  padding: 3rem;
+  color: #2a6279;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.0625rem 0 rgba(8, 11, 14, 0.06), 0 0.375rem 0.375rem -0.0625rem rgba(8, 11, 14, 0.1);
+
+}
+
+button{
+  background-color: #d8a051;
+  color: #fff;
+  border: none;
+  width: 150px;
+  height: 36px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  line-height: 36px;
+  border-radius: 2px;
+  box-shadow: 0 0 0.0625rem 0 rgba(8, 11, 14, 0.06), 0 0.375rem 0.375rem -0.0625rem rgba(8, 11, 14, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover, button:focus{
+  box-shadow: 0 0 0.0625rem 0 rgba(8, 11, 14, 0.06), 0 0.375rem 0.375rem -0.0625rem rgba(8, 11, 14, 0.1);
 }
