@@ -7,6 +7,11 @@ body {
   margin: 0;
   font-family: 'Oswald', sans-serif;
   background-color: #FFFAFB;
+  background: url("./assets/background.jpeg");
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  justify-content: center;
 }
 
 button,
@@ -16,7 +21,6 @@ input {
 
 #container {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 3rem 0;
